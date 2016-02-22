@@ -26,4 +26,17 @@ defmodule ETSBench do
     end
   end
 
+  bench "insert and retrieve five items" do
+    Enum.each [1, 2, 3, 4, 5], fn n ->
+      key = "sampleKey#{n}"
+      value = "sampleValue#{n}"
+
+      :ets.insert( @table, { key, value } )
+
+      retrieved_value = :ets.lookup_element( @table, key, 2 )
+
+      IO.puts( retrieved_value )
+    end
+  end
+
 end
