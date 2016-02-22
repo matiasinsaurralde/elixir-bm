@@ -27,6 +27,7 @@ defmodule Bm.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:benchfella, "~> 0.3.0"}]
+    [{:redix, ">= 0.0.0"},
+     {:benchfella, "~> 0.3.0"}]
   end
 end
