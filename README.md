@@ -1,20 +1,17 @@
-# Bm
+# Microbenchmark experiments
 
-**TODO: Add description**
+The idea is to compare perfomance between Redis GET/SET and a similar application using Erlang ETS.
 
-## Installation
+## Requirements
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+You need a local Redis instance.
 
-  1. Add bm to your list of dependencies in `mix.exs`:
+## Installation/Usage
 
-        def deps do
-          [{:bm, "~> 0.0.1"}]
-        end
+Fetch & compile the required deps:
 
-  2. Ensure bm is started before your application:
+```mix do deps.get, deps.compile```
 
-        def application do
-          [applications: [:bm]]
-        end
+Run the benchmarks:
 
+```mix bench```
