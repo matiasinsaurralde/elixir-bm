@@ -35,7 +35,6 @@ defmodule ETSBench do
 
       retrieved_value = :ets.lookup_element( @table, key, 2 )
 
-      IO.puts( retrieved_value )
     end
   end
 
