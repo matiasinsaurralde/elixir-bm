@@ -5,6 +5,7 @@ defmodule ETSBench do
 
   before_each_bench _ do
     :ets.new( @table, [ :set, :public, :named_table ] )
+    :ets.insert( @table, { "existingkey", %{ "sample": "value" } } )
     { :ok, nil }
   end
 
@@ -36,6 +37,10 @@ defmodule ETSBench do
       retrieved_value = :ets.lookup_element( @table, key, 2 )
 
     end
+  end
+
+  bench "read a existing key" do
+    :ets.lookup_element( @table, "existingkey", 2 )
   end
 
 end
