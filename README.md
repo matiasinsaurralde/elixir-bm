@@ -1,6 +1,6 @@
 # Microbenchmark experiments
 
-The idea is to compare perfomance between Redis GET/SET and a similar application using Erlang ETS.
+The idea is to compare perfomance between Redis GET/SET and Erlang ETS.
 
 ## Requirements
 
